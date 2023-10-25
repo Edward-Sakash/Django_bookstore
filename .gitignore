@@ -1,0 +1,4 @@
+
+*.pyc
+
+bookstore_project/db.sqlite3
