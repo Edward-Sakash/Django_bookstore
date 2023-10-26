@@ -10,6 +10,9 @@
         <a href="{% url 'books:book_list' %}">book_list</a>
         <a href="{% url 'books:book_create' %}">+add_book</a>
     </Header>
+    {% if user.is_authenticated %}
+    <p>hi {{user.username}}</p>
+    {% endif %}
     {% block content %}                                                                           
     {% endblock content %}
 </body>

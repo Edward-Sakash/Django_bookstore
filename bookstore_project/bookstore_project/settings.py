@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books.apps.BooksConfig',  # Add your books app here
+    'accounts.apps.AccountsConfig', # Add your accounts app here
+    
 ]
 
 MIDDLEWARE = [
@@ -90,3 +92,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'books:book_list'
+LOGOUT_REDIRECT_URL = 'books:book_list'
